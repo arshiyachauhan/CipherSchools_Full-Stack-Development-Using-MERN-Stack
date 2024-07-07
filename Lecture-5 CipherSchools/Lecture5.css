@@ -1,0 +1,57 @@
+/* Simple Selector */
+/* Element Selector */
+p{
+    text-align: center;
+}
+/* Id Selector */
+#myparagrapgh{
+    text-align: center;
+}
+/* Class selector */
+.center-paragraph {
+    text-align: center;
+}
+/* Universal Selector */
+*{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+/* Grouping Selector */
+h1,.center-paragraph{
+    text-align: center;
+    color:rgb(9, 28, 132);
+}
+
+/* Combinator Selector */
+/* 1. Descendant Selector - talks about every descendant*/
+div p{
+    background-color: yellow;
+}
+/* 2. Child Selector - talks about direct child */
+div > p {
+    background-color: rgb(79, 205, 163);
+}
+/* 3. Adjacent(immediately following) Sibling Selector- select element that is directly after another specific element */
+/* like Para 3 */
+div + p {
+    background-color:rgb(250, 113, 63);
+}
+/* 4. General Sibling Selector - selects all elements that are next siblings of a specific element */
+/* like Para 3 and 4 */
+div ~ p {
+    background-color: cornflowerblue;
+}
+
+/* Pseudo-Class Selector */
+div ~ p:hover {
+    background-color:rgb(221, 128, 14) ;
+}
+
+/* Pseudo-Element Selector: Style specific part (like word or lines) of an element */
+div ~ p::first-letter {
+    color:red;
+}
+
+/* Attribute-Selector */
+a[target]{
+    background-color:cyan ;
+}
