@@ -1,0 +1,65 @@
+<!-- Event is any kind of user interaction -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handling</title>
+</head>
+<body>
+    <main>
+        <!-- <h1 onclick="this.innerHTML= 'This is after click!'">My page Title</h1> -->
+        <h1 onclick="changeText(this)">My page Title</h1>
+       
+         <div>
+            <button onclick="displayDate()">The time is: </button>
+            <p id="demo"></p>
+        </div>
+
+        <form>
+            <input type="text" id="firstName" onchange="upperCase()"/>
+        </form><br>
+
+        <!-- <div 
+            onmouseover="mOver(this)" onmouseout="mOut(this)" 
+            style="background-color: crimson; width:120px; height:20px; padding:40px">
+            Mouse over me.
+        </div> -->
+
+        <div 
+            onmousedown="mDown(this)" 
+            onmouseup="mUp(this)"
+            style="background-color: crimson; width:120px; height:20px; padding:40px">
+            Mouse over me.
+        </div>
+    </main>
+    
+    <script>
+        function changeText(id){
+            id.innerHTML='This is after click!';
+        }
+        function displayDate(){
+            document.getElementById("demo").innerHTML = new Date();
+        }
+        function upperCase(){
+            const x = document.getElementById("firstName");
+            x.value= x.value.toUpperCase();
+        }
+        function mOver(obj){
+            obj.innerHTML="Thankyou";
+        }
+        function mOut(obj){
+            obj.innerHTML="Mouse Over me";
+        }
+        function mDown(obj){
+            obj.style.backgroundColor="cyan";
+            obj.innerHTML="Release me";
+        }
+        function mUp(obj){
+            obj.style.backgroundColor="yellow";
+            obj.innerHTML="Thankyou";
+        }
+    </script>
+
+</body>
+</html>
