@@ -1,5 +1,4 @@
 // import { Component } from "react";
-import { useState } from "react";
 import ToDoScreen from "./screens/ToDoScreen";
 import AddTask from "./components/AddTask";
 
@@ -17,7 +16,6 @@ const router = createBrowserRouter([
     },
 ]);
 const App = () => {
-    const [tasks, setTasks]= useState([]);
     return <RouterProvider router = {router}/>;
 };
 export default App;
