@@ -1,0 +1,11 @@
+{
+  "name": "math",
+  "version": "1.0.0",
+  "description": "This is a test app based on math.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Arshiya",
+  "license": "ISC"
+}
